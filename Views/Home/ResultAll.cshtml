@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Shop.Models.Product>
+@{
+    ViewData["Title"] = "Все продукты";
+}
+
+<h2 class="display-4">Все продукты</h2>
+@foreach (var item in Model)
+{
+    <p>@item.ToString()</p>
+    <br />
+}

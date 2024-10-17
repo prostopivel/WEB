@@ -1,0 +1,19 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Результат поиска";
+}
+
+<h2 class="display-4">Результат поиска</h2>
+@if (ViewBag.ProductName != null)
+{
+    <p>Вы ввели название продукта: @ViewBag.ProductName</p>
+}
+@if (Model != null)
+{
+    <p>Найденный продукт:</p>
+    <p>@Model.ToString()</p>
+}
+else
+{
+    <p>Продукт не найден</p>
+}

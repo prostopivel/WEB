@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h2 class="display-4">Поиск по имени</h2>
+    <form asp-action="FindByName" asp-controller="Home" method="get">
+        <input type="text" name="productName" id="productNameInput" placeholder="Название продукта"></input>
+        <button type="submit">Найти по имени</button>
+    </form>
+
+    <h2 class="display-4">Поиск по цене</h2>
+    <form asp-action="FindByPrice" asp-controller="Home" method="get">
+        <input type="text" name="price" id="priceInput" placeholder="Цена"></input>
+        <button type="submit">Найти по цене</button>
+    </form>
+
+    <h2 class="display-4">Показать всё</h2>
+    <form asp-action="ResultAll" asp-controller="Home" method="get">
+        <button type="submit">Показать всё</button>
+    </form>
+
+    <h2 class="display-4">Добавить продукт</h2>
+    <form asp-action="AddProduct" asp-controller="Home" method="get">
+        <button type="submit">Добавить продукт</button>
+    </form>
+
+    <h2 class="display-4">Удалить продукт</h2>
+    <form asp-action="DeleteProduct" asp-controller="Home" method="get">
+        <input type="text" name="productName" id="deleteProduct" placeholder="Удалить продукт" />
+        <button type="submit" class="btn btn-danger">Удалить продукт</button>
+    </form>
+</div>
